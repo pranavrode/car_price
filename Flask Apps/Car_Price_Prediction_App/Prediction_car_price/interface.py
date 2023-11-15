@@ -3,7 +3,7 @@ from project_app.utils import CarPrediction
 import config
 import numpy as np
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 car_brands = [
     "Audi", "BMW", "Chevrolet", "Daewoo", "Datsun", "Fiat", "Force",
