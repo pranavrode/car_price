@@ -5,15 +5,15 @@ import numpy as np
 
 app = Flask(__name__, template_folder='templates')
 
-car_brands = [
-    "Audi", "BMW", "Chevrolet", "Daewoo", "Datsun", "Fiat", "Force",
-    "Ford", "Honda", "Hyundai", "Isuzu", "Jaguar", "Jeep", "Kia", "Land",
-    "MG", "Mahindra", "Maruti", "Mercedes-Benz", "Mitsubishi", "Nissan",
-    "OpelCorsa", "Renault", "Skoda", "Tata", "Toyota", "Volkswagen", "Volvo"]
+#car_brands = [
+   # "Audi", "BMW", "Chevrolet", "Daewoo", "Datsun", "Fiat", "Force",
+    #"Ford", "Honda", "Hyundai", "Isuzu", "Jaguar", "Jeep", "Kia", "Land",
+   # "MG", "Mahindra", "Maruti", "Mercedes-Benz", "Mitsubishi", "Nissan",
+    #"OpelCorsa", "Renault", "Skoda", "Tata", "Toyota", "Volkswagen", "Volvo"]
 
 @app.route('/')
 def home():
-    return render_template("index.html",car_brands=car_brands)
+    return render_template("index.html")
 
 @app.route('/predict',methods=['POST'])
 def predict_car_price():
